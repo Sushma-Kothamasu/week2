@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #train{
+        padding:20em;
+        background-image:url("https://img.freepik.com/free-vector/bear-train-cartoon-style_1308-132760.jpg?w=826&t=st=1695814813~exp=1695815413~hmac=864e35fc8d8a0605b2258c3d1a8af0b7f64b7dd72b3fafcd6ca0d2adc2c6dfaa");
+        background-repeat: no-repeat;
+        background-position:center right;
+        background-size: 150px;
+        /*position: relative;
+        animation-name: trainmove;
+        animation-duration:4s;
+        animation-iteration-count: infinite;*/
+       }
+       @keyframes trainmove{
+        from{
+            background-position: 100%;
+        }
+        to{
+            background-position: 0px;
+        }
+
+       }
+       @-webkit-keyframes trainmove{
+        from{
+            background-position: 100%;
+        }
+        to{
+            background-position: 0px;
+        }
+       }
+       #strt{
+        text-align: center;
+       }
+
+    </style>
+    
+</head>
+<body>
+   <div id="train"></div>
+   <button id="strt">Start</button>
+   <button id="stot">Stop</button>
+<script>
+    strt.addEventListener("click",function(){
+        train.style.animation="trainmove 4s  infinite";
+        train.style.webkitAnimation="trainmove 4s steps(6) infinite";
+    });
+    stot.addEventListener("click",function(){
+        train.style.animationPlayState = "paused";
+
+        
+        /*train.style.webkitAnimation="";*/
+    });
+
+</script>
+     
+</body>
+</html>

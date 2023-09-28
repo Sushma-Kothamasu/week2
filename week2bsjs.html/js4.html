@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <p>Today's Date</p>
+      <button onclick="dat()">Show Date</button>
+      <p id="sep"></p>
+      <button onclick="time()">Show Time</button>
+      <p id="ti"></p>
+       <script>
+          function dat() {
+            const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var n=new Date();
+             const date = n.getDate();
+             const month = months[n.getMonth()]  //current month
+             const year = n.getFullYear() //current year
+             var text=date + '/' + month + '/' + year;
+             document.getElementById("sep").innerHTML =text;
+             
+          }
+          function time(){
+            document.getElementById('ti').innerHTML = Date();
+
+          }
+       </script>
+   </body>
+</html>

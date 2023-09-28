@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            font-family: "Brush Script MT", cursive;
+            
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .input-container{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 650px;
+            height: 30px;
+
+        }
+      .icon{
+        background-color: white;
+        border-inline-end-width: 2px;
+      }
+        
+    </style>
+</head>
+<body>
+<form class="hes">
+    <div class="header">
+        <h1>Instagram</h1>
+    </div>
+    <div class="input-container">
+        <i class="fa fa-user icon" style="height: 30px;"></i>
+        <input class="input-field" type="text" placeholder="Username" name="usrnm" id="username" style="height: 30px;">
+    </div>
+    <div class="input-container">
+        <i class="fa fa-key icon" style="height: 30px;"></i>
+        <input class="input-field" type="password" placeholder="Password" name="psw" id="password" style="height: 30px;">
+    </div>
+    <div class="input-container">
+        <input style="height: 30px; background-color: blue; border-radius: 3px;" type="submit" value="Log in" onclick="login()">
+    </div>
+    <div class="input-container">
+        <p><input type="checkbox" id="remember"> Remember me</p>
+        <p><a href="#">Forgot Password?</a></p>
+        <p>Don't have an account? <a href="#">Sign up here.</a></p>
+    </div>
+</form>
+
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username == "" || password == "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+            alert("Logged in successfully!");
+        }
+    </script>
+</body>
+</html>

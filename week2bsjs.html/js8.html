@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-Task-9</title>
+    <style>
+            body{
+                background: linear-gradient(to right, pink, violet);
+        font-family: Arial, sans-serif;            
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 280px;
+      min-height: 100vh;
+    }
+        
+        
+        .mt3{
+            display:flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+        label{
+            width:150px;
+            font-style: bold;
+        }
+        
+
+   
+    </style>
+</head>
+<body>
+                <form class="new" onsubmit="return fun()">
+                    <span id="error" style="color: red; visibility: hidden;">POOR!!</span>
+                    
+                    <div class="mt3">
+                        <label> Full name : </label><input type = "text" name="sname" id="fname" value="">
+                    </div>             
+                    <div class="mt3">
+                    <label for="email"> Email : </label><input type = "email" id =email name = email value="">
+                    </div>
+                    <div class="mt3">
+                    <label> Gender : </label>
+                    <label for ="male">Male</label><input type = "radio"  name ="gender" id ="male" value="male">
+           <label for ="female">Female</label><input type = "radio" id ="female" name = "gender" value="female"> 
+           </div>
+           <div class="mt3">
+                    <label> Age : </label><input type = "number" value="">
+            </div>
+            <div class="mt3">
+                <label> Phone Number  : </label><input type = "tel  " value="" id="numb">
+
+            </div>
+                
+                    
+            <div class="mt3">
+                    <label> Address : </label><textarea id="addr" value="" ></textarea>
+            </div>
+            <div class="mt3">
+               
+                <label> State : </label><input type = "text" id="state" value=""> 
+            </div>
+            <div class="mt3">
+                
+                    <label> Country : </label> <select>
+                        <option>Choose your country</option>
+                        <option>India</option>
+                        <option>USA</option>
+                    </select>
+            </div>
+            <div class="mt3">
+                
+                    <label>Languages Known : </label>
+                       <input type = "checkbox"> <label for ="English">English</label>
+                           <input type = "checkbox">  <label for ="Kannada">Kannada</label>
+                            <input type = "checkbox"><label for ="Telugu">Telugu</label> 
+                           <input type = "checkbox"> <label for ="Hindi">Hindi</label> 
+            </div>
+            <div class="mt3">
+
+                    <input type = "checkbox">
+                    <label> <span>Hereby I declare all details are true</span></label>
+            </div>
+            
+            <span>Login to<a href = https://careers.ethnus.com/candidateportal?source=career target = _blank>Ethnus
+            </a> Website</span><br><br>
+
+<input style="background-color: red ;"class="button" type="submit" name="" value="submit">
+
+                </form>
+                <script>
+                    function fun(){
+                        var fname=document.getElementById("fname");
+                        var email=document.getElementById("email");
+                        var num=document.getElementById("numb");
+                        var add=document.getElementById("addr");
+                        var msg=document.getElementById("error");
+                        if(fname.value.trim().length<10){
+                            msg.style.visibility=visible;
+                            return false;
+                        }
+                        else if(email.value.trim().length<6){
+                            error.style.visibility=visible;
+                            return false;
+                        }
+                        else if(numb.value.trim().length<10){
+                            error.style.visibility=visible;
+                            return false;
+                        }
+                        else if(add.value.trim().length<10){
+                            error.style.visibility=visible;
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }                        
+                    }
+                </script>
+                </body>
+</html>
+                   

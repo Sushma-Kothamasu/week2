@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .butt{
+        padding-left: 50px;
+    }
+	button:focus{
+		background-color: blue;
+	}
+
+    </style>
+</head>
+
+</html><body style="margin: 30px">
+	<form>
+		1st Number : <input type="text" id="firstNumber" /><br><br>
+		2nd Number: <input type="text" id="secondNumber" /><br><br>
+		<input  type="button"  onClick="multiplication()" Value="Multiply"/>
+        <class="butt">
+        <input type="button" onClick="division()" Value="Divide" />
+        </div>
+	</form>
+
+	<p>The Result is : <br>
+		<span id="result"></span>
+	</p>
+
+
+	<script>
+		function multiplication()
+		{
+		num1 = document.getElementById(
+			"firstNumber").value;
+		num2 = document.getElementById(
+			"secondNumber").value;
+		document.getElementById(
+			"result").innerHTML = num1 * num2;
+		}
+        function division()
+		{
+		num1 = document.getElementById(
+			"firstNumber").value;
+		num2 = document.getElementById(
+			"secondNumber").value;
+		document.getElementById(
+			"result").innerHTML = num1 / num2;
+		}
+	</script>
+</body>
